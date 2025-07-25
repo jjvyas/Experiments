@@ -1,15 +1,25 @@
 public class Main {
     public static void main(String[] args) {
-        // Using default constructor
-        Calculator calc1 = new Calculator();
+        Student s = new Student();
+        s.setStudentDetails("Rahul", 20, "B.Tech", 123);
+        System.out.println("Student Details:");
+        s.displayStudentDetails();
+        System.out.println();
 
-        // Using parameterized constructor
-        Calculator calc2 = new Calculator(15, 25);
+        GraduateStudent gs = new GraduateStudent();
+        gs.setGraduateStudentDetails("Anjali", 22, "M.Tech", 456, 2023);
+        System.out.println("Graduate Student Details:");
+        gs.displayGraduateStudentDetails();
+        System.out.println();
 
-        // Demonstrating method overloading
-        calc1.add();                    // No parameters
-        calc1.add(20, 30);              // Two integers
-        calc1.add(12.5f, 15.5f, 10.0f); // Three floats
+        Teacher t = new Teacher();
+        t.setTeacherDetails("Meera", 35, "Mathematics");
+        t.displayTeacherDetails();
+        System.out.println();
 
+        Administrator a = new Administrator();
+        a.setAdministratorDetails("Raj", 40, "HR");
+        System.out.println("Administrator Details:");
+        a.displayAdministratorDetails();
     }
 }
